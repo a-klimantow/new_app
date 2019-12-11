@@ -1,12 +1,12 @@
 import React from "react"
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom"
-import { ObjectPage, TaskPage, NotFound } from "components/pages"
+import { ObjectPage, TaskPage, NotFound, LoginPage } from "components/pages"
 import { Layout } from "components/ui"
 
 export default () => (
   <BrowserRouter>
     <Switch>
-      <Route path="/login" render={() => "logon"} />
+      <Route path="/login" component={LoginPage} />
       <Layout>
         <Switch>
           <Route path="/" render={() => <Redirect to="/tasks" />} exact />
